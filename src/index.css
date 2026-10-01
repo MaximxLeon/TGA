@@ -1,17 +1,89 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #25d366;
+  --color-primary-hover: #20bd5a;
+  --color-primary-light: #e7f9ed;
+
+  --color-background: #efeae2;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f5f6f6;
+
+  --color-border: #e9edef;
+
+  --color-text-primary: #111b21;
+  --color-text-secondary: #667781;
+  --color-text-muted: #8696a0;
+
+  --color-success: #25d366;
+  --color-danger: #ea0038;
+
+  --color-chat-incoming: #ffffff;
+  --color-chat-outgoing: #d9fdd3;
+}
+
 :root {
   font-family:
-    Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #111827;
-  background: #ffffff;
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: var(--color-text-primary);
+  background: var(--color-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+}
+
 body {
   margin: 0;
-  min-width: 320px;
+  background: var(--color-background);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* WhatsApp-style scrollbar */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5c9cc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aeb4b7;
 }
